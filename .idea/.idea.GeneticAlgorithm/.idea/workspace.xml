@@ -1,7 +1,18 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="b47a6dad-8a10-4c77-8380-926ff4fd1494" name="Default" comment="" />
+    <list default="true" id="b47a6dad-8a10-4c77-8380-926ff4fd1494" name="Default" comment="">
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/.idea.GeneticAlgorithm/.idea/vcs.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/GeneticAlgorithm/Converter.cs" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/GeneticAlgorithm/Ind.cs" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/GeneticAlgorithm/bin/Debug/GeneticAlgorithm.exe" afterPath="$PROJECT_DIR$/GeneticAlgorithm/bin/Debug/GeneticAlgorithm.exe" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/GeneticAlgorithm/bin/Debug/GeneticAlgorithm.pdb" afterPath="$PROJECT_DIR$/GeneticAlgorithm/bin/Debug/GeneticAlgorithm.pdb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/GeneticAlgorithm/obj/Debug/GeneticAlgorithm.exe" afterPath="$PROJECT_DIR$/GeneticAlgorithm/obj/Debug/GeneticAlgorithm.exe" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/GeneticAlgorithm/obj/Debug/GeneticAlgorithm.pdb" afterPath="$PROJECT_DIR$/GeneticAlgorithm/obj/Debug/GeneticAlgorithm.pdb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/.idea.GeneticAlgorithm/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/.idea.GeneticAlgorithm/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/GeneticAlgorithm/GeneticAlgorithm.csproj" afterPath="$PROJECT_DIR$/GeneticAlgorithm/GeneticAlgorithm.csproj" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/GeneticAlgorithm/Program.cs" afterPath="$PROJECT_DIR$/GeneticAlgorithm/Program.cs" />
+    </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -11,67 +22,45 @@
   </component>
   <component name="ExecutionTargetManager" SELECTED_TARGET="default_target" />
   <component name="FileEditorManager">
-    <splitter split-orientation="horizontal" split-proportion="0.5">
-      <split-first>
-        <leaf>
-          <file leaf-file-name="Program.cs" pinned="false" current-in-tab="true">
-            <entry file="file://$PROJECT_DIR$/GeneticAlgorithm/Program.cs">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="391">
-                  <caret line="29" column="35" lean-forward="true" selection-start-line="29" selection-start-column="35" selection-end-line="29" selection-end-column="35" />
-                  <folding>
-                    <marker date="1488990662081" expanded="true" signature="6:88" ph="..." />
-                    <marker date="1488990662081" expanded="true" signature="116:4114" ph="{...}" />
-                    <marker date="1488990662081" expanded="true" signature="136:4112" ph="{...}" />
-                    <marker date="1488990662081" expanded="true" signature="182:1939" ph="{...}" />
-                    <marker date="1488990662081" expanded="true" signature="205:1100" ph="/* FUNCTIONS TO DEFINE (for each problem): ... */" />
-                    <marker date="1488990662081" expanded="true" signature="1561:1929" ph="/* GeneticAlgorithm&lt;int&gt; fakeProblemGA = new GeneticAlgorithm&lt;int&gt;(0.0, 0.0, false, 0, 0); // CHANGE THE GENERIC  ... */" />
-                    <marker date="1488990662081" expanded="true" signature="1984:2078" ph="{...}" />
-                    <marker date="1488990662081" expanded="true" signature="2137:2181" ph="{...}" />
-                    <marker date="1488990662081" expanded="true" signature="2280:2325" ph="{...}" />
-                    <marker date="1488990662081" expanded="true" signature="2398:3042" ph="{...}" />
-                    <marker date="1488990662081" expanded="true" signature="3114:3740" ph="{...}" />
-                    <marker date="1488990662081" expanded="true" signature="3252:3666" ph="{...}" />
-                    <marker date="1488990662081" expanded="true" signature="3367:3652" ph="{...}" />
-                    <marker date="1488990662081" expanded="true" signature="3808:4106" ph="{...}" />
-                    <marker date="1488990662081" expanded="true" signature="3898:4069" ph="{...}" />
-                  </folding>
-                </state>
-              </provider>
-            </entry>
-          </file>
-        </leaf>
-      </split-first>
-      <split-second>
-        <leaf>
-          <file leaf-file-name="Algorithm.cs" pinned="false" current-in-tab="true">
-            <entry file="file://$PROJECT_DIR$/GeneticAlgorithm/Algorithm.cs">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="816">
-                  <caret line="96" column="9" lean-forward="false" selection-start-line="96" selection-start-column="9" selection-end-line="96" selection-end-column="9" />
-                  <folding>
-                    <marker date="1488979200296" expanded="true" signature="6:32" ph="..." />
-                    <marker date="1488979200296" expanded="true" signature="60:4307" ph="{...}" />
-                    <marker date="1488979200296" expanded="true" signature="101:4305" ph="{...}" />
-                    <marker date="1488979200296" expanded="true" signature="417:665" ph="{...}" />
-                    <marker date="1488979200296" expanded="true" signature="921:4299" ph="{...}" />
-                    <marker date="1488979200296" expanded="true" signature="1229:3781" ph="{...}" />
-                    <marker date="1488979200296" expanded="true" signature="1644:2175" ph="{...}" />
-                    <marker date="1488979200296" expanded="true" signature="2196:2268" ph="{...}" />
-                    <marker date="1488979200296" expanded="true" signature="2603:3531" ph="{...}" />
-                  </folding>
-                </state>
-              </provider>
-            </entry>
-          </file>
-        </leaf>
-      </split-second>
-    </splitter>
+    <leaf>
+      <file leaf-file-name="Program.cs" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/GeneticAlgorithm/Program.cs">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="456">
+              <caret line="41" column="9" lean-forward="true" selection-start-line="41" selection-start-column="9" selection-end-line="41" selection-end-column="9" />
+              <folding>
+                <marker date="1490279495910" expanded="true" signature="6:167" ph="..." />
+                <marker date="1490279495910" expanded="true" signature="195:4565" ph="{...}" />
+                <marker date="1490279495910" expanded="true" signature="215:4563" ph="{...}" />
+                <marker date="1490279495910" expanded="true" signature="314:2020" ph="{...}" />
+                <marker date="1490279495910" expanded="true" signature="337:1232" ph="/* FUNCTIONS TO DEFINE (for each problem): ... */" />
+                <marker date="1490279495910" expanded="true" signature="2071:2145" ph="{...}" />
+                <marker date="1490279495910" expanded="true" signature="2210:2326" ph="{...}" />
+                <marker date="1490279495910" expanded="true" signature="2437:3116" ph="{...}" />
+                <marker date="1490279495910" expanded="true" signature="2625:3043" ph="{...}" />
+                <marker date="1490279495910" expanded="true" signature="2774:3029" ph="{...}" />
+                <marker date="1490279495910" expanded="true" signature="2883:3011" ph="{...}" />
+                <marker date="1490279495910" expanded="true" signature="3204:3852" ph="{...}" />
+                <marker date="1490279495910" expanded="true" signature="3933:4245" ph="{...}" />
+                <marker date="1490279495910" expanded="true" signature="3997:4204" ph="{...}" />
+                <marker date="1490279495910" expanded="true" signature="4112:4190" ph="{...}" />
+                <marker date="1490279495910" expanded="true" signature="4316:4557" ph="{...}" />
+                <marker date="1490279495910" expanded="true" signature="4431:4525" ph="{...}" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
       <find>mutationRate</find>
+      <find>console</find>
     </findStrings>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
@@ -80,15 +69,17 @@
         <option value="$USER_HOME$/AppData/Local/JetBrains/Shared/v08/DecompilerCache/decompiler/C5EA14A2-BDD5-42D4-9796-00639BD6AD8B/cc/0f3aaf75/Int32.cs" />
         <option value="$USER_HOME$/AppData/Local/JetBrains/Shared/v08/DecompilerCache/decompiler/C5EA14A2-BDD5-42D4-9796-00639BD6AD8B/93/8a23b22e/Number.cs" />
         <option value="$PROJECT_DIR$/GeneticAlgorithm/Algorithm.cs" />
+        <option value="$PROJECT_DIR$/GeneticAlgorithm/Converter.cs" />
+        <option value="$PROJECT_DIR$/GeneticAlgorithm/Ind.cs" />
         <option value="$PROJECT_DIR$/GeneticAlgorithm/Program.cs" />
       </list>
     </option>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="-8" />
-    <option name="y" value="-8" />
-    <option name="width" value="1936" />
-    <option name="height" value="1056" />
+    <option name="x" value="-9" />
+    <option name="y" value="-9" />
+    <option name="width" value="1938" />
+    <option name="height" value="1048" />
   </component>
   <component name="ProjectView">
     <navigator currentView="SolutionExplorer" proportions="" version="1">
@@ -128,7 +119,7 @@
     </panes>
   </component>
   <component name="PropertiesComponent">
-    <property name="SearchEverywhereHistoryKey" value="&#9;FILE&#9;file://C:/Users/ceesj/Documents/hogeschool/data science/Genetic Algorithms - Csharp Main loop code/GeneticAlgorithm/Algorithm.cs" />
+    <property name="SearchEverywhereHistoryKey" value="&#9;FILE&#9;file://C:/Users/ceesj/Documents/hogeschool/data science/Genetic Algorithms - Csharp Main loop code/GeneticAlgorithm/Program.cs" />
   </component>
   <component name="RunManager" selected=".NET Project.Default">
     <configuration default="true" type="DotNetProject" factoryName=".NET Project">
@@ -174,6 +165,9 @@
   <component name="ShelveChangesManager" show_recycled="false">
     <option name="remove_strategy" value="false" />
   </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
       <changelist id="b47a6dad-8a10-4c77-8380-926ff4fd1494" name="Default" comment="" />
@@ -186,11 +180,15 @@
       <workItem from="1488825865144" duration="1652000" />
       <workItem from="1488889065836" duration="2968000" />
       <workItem from="1488973393901" duration="10477000" />
+      <workItem from="1489493572157" duration="3831000" />
+      <workItem from="1490050100210" duration="1763000" />
+      <workItem from="1490096693451" duration="1480000" />
+      <workItem from="1490274501874" duration="5005000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="18157000" />
+    <option name="totallyTimeSpent" value="30236000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -202,15 +200,16 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
+    <frame x="-9" y="-9" width="1938" height="1048" extended-state="6" />
+    <editor active="true" />
     <layout>
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Errors In Solution" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Unit Tests" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Run Dashboard" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
-      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.41851106" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.21627188" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="NuGet" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Change Signature" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
@@ -238,24 +237,137 @@
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/GeneticAlgorithm/Program.cs">
       <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1722">
+          <caret line="82" column="13" lean-forward="true" selection-start-line="82" selection-start-column="13" selection-end-line="82" selection-end-column="13" />
+          <folding>
+            <marker date="1490279495910" expanded="true" signature="6:167" ph="..." />
+            <marker date="1490279495910" expanded="true" signature="195:4565" ph="{...}" />
+            <marker date="1490279495910" expanded="true" signature="215:4563" ph="{...}" />
+            <marker date="1490279495910" expanded="true" signature="314:2020" ph="{...}" />
+            <marker date="1490279495910" expanded="true" signature="337:1232" ph="/* FUNCTIONS TO DEFINE (for each problem): ... */" />
+            <marker date="1490279495910" expanded="true" signature="2071:2145" ph="{...}" />
+            <marker date="1490279495910" expanded="true" signature="2210:2326" ph="{...}" />
+            <marker date="1490279495910" expanded="true" signature="2437:3116" ph="{...}" />
+            <marker date="1490279495910" expanded="true" signature="2625:3043" ph="{...}" />
+            <marker date="1490279495910" expanded="true" signature="2774:3029" ph="{...}" />
+            <marker date="1490279495910" expanded="true" signature="2883:3011" ph="{...}" />
+            <marker date="1490279495910" expanded="true" signature="3204:3852" ph="{...}" />
+            <marker date="1490279495910" expanded="true" signature="3933:4245" ph="{...}" />
+            <marker date="1490279495910" expanded="true" signature="3997:4204" ph="{...}" />
+            <marker date="1490279495910" expanded="true" signature="4112:4190" ph="{...}" />
+            <marker date="1490279495910" expanded="true" signature="4316:4557" ph="{...}" />
+            <marker date="1490279495910" expanded="true" signature="4431:4525" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/GeneticAlgorithm/Program.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1260">
+          <caret line="60" column="9" lean-forward="true" selection-start-line="60" selection-start-column="9" selection-end-line="60" selection-end-column="9" />
+          <folding>
+            <marker date="1490279495910" expanded="true" signature="6:167" ph="..." />
+            <marker date="1490279495910" expanded="true" signature="195:4565" ph="{...}" />
+            <marker date="1490279495910" expanded="true" signature="215:4563" ph="{...}" />
+            <marker date="1490279495910" expanded="true" signature="314:2020" ph="{...}" />
+            <marker date="1490279495910" expanded="true" signature="337:1232" ph="/* FUNCTIONS TO DEFINE (for each problem): ... */" />
+            <marker date="1490279495910" expanded="true" signature="2071:2145" ph="{...}" />
+            <marker date="1490279495910" expanded="true" signature="2210:2326" ph="{...}" />
+            <marker date="1490279495910" expanded="true" signature="2437:3116" ph="{...}" />
+            <marker date="1490279495910" expanded="true" signature="2625:3043" ph="{...}" />
+            <marker date="1490279495910" expanded="true" signature="2774:3029" ph="{...}" />
+            <marker date="1490279495910" expanded="true" signature="2883:3011" ph="{...}" />
+            <marker date="1490279495910" expanded="true" signature="3204:3852" ph="{...}" />
+            <marker date="1490279495910" expanded="true" signature="3933:4245" ph="{...}" />
+            <marker date="1490279495910" expanded="true" signature="3997:4204" ph="{...}" />
+            <marker date="1490279495910" expanded="true" signature="4112:4190" ph="{...}" />
+            <marker date="1490279495910" expanded="true" signature="4316:4557" ph="{...}" />
+            <marker date="1490279495910" expanded="true" signature="4431:4525" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/GeneticAlgorithm/Program.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2625">
+          <caret line="125" column="51" lean-forward="true" selection-start-line="125" selection-start-column="51" selection-end-line="125" selection-end-column="51" />
+          <folding>
+            <marker date="1490279495910" expanded="true" signature="6:167" ph="..." />
+            <marker date="1490279495910" expanded="true" signature="195:4565" ph="{...}" />
+            <marker date="1490279495910" expanded="true" signature="215:4563" ph="{...}" />
+            <marker date="1490279495910" expanded="true" signature="314:2020" ph="{...}" />
+            <marker date="1490279495910" expanded="true" signature="337:1232" ph="/* FUNCTIONS TO DEFINE (for each problem): ... */" />
+            <marker date="1490279495910" expanded="true" signature="2071:2145" ph="{...}" />
+            <marker date="1490279495910" expanded="true" signature="2210:2326" ph="{...}" />
+            <marker date="1490279495910" expanded="true" signature="2437:3116" ph="{...}" />
+            <marker date="1490279495910" expanded="true" signature="2625:3043" ph="{...}" />
+            <marker date="1490279495910" expanded="true" signature="2774:3029" ph="{...}" />
+            <marker date="1490279495910" expanded="true" signature="2883:3011" ph="{...}" />
+            <marker date="1490279495910" expanded="true" signature="3204:3852" ph="{...}" />
+            <marker date="1490279495910" expanded="true" signature="3933:4245" ph="{...}" />
+            <marker date="1490279495910" expanded="true" signature="3997:4204" ph="{...}" />
+            <marker date="1490279495910" expanded="true" signature="4112:4190" ph="{...}" />
+            <marker date="1490279495910" expanded="true" signature="4316:4557" ph="{...}" />
+            <marker date="1490279495910" expanded="true" signature="4431:4525" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/GeneticAlgorithm/Program.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="609">
+          <caret line="29" column="35" lean-forward="true" selection-start-line="29" selection-start-column="35" selection-end-line="29" selection-end-column="35" />
+          <folding>
+            <marker date="1490279495910" expanded="true" signature="6:167" ph="..." />
+            <marker date="1490279495910" expanded="true" signature="195:4565" ph="{...}" />
+            <marker date="1490279495910" expanded="true" signature="215:4563" ph="{...}" />
+            <marker date="1490279495910" expanded="true" signature="314:2020" ph="{...}" />
+            <marker date="1490279495910" expanded="true" signature="337:1232" ph="/* FUNCTIONS TO DEFINE (for each problem): ... */" />
+            <marker date="1490279495910" expanded="true" signature="2071:2145" ph="{...}" />
+            <marker date="1490279495910" expanded="true" signature="2210:2326" ph="{...}" />
+            <marker date="1490279495910" expanded="true" signature="2437:3116" ph="{...}" />
+            <marker date="1490279495910" expanded="true" signature="2625:3043" ph="{...}" />
+            <marker date="1490279495910" expanded="true" signature="2774:3029" ph="{...}" />
+            <marker date="1490279495910" expanded="true" signature="2883:3011" ph="{...}" />
+            <marker date="1490279495910" expanded="true" signature="3204:3852" ph="{...}" />
+            <marker date="1490279495910" expanded="true" signature="3933:4245" ph="{...}" />
+            <marker date="1490279495910" expanded="true" signature="3997:4204" ph="{...}" />
+            <marker date="1490279495910" expanded="true" signature="4112:4190" ph="{...}" />
+            <marker date="1490279495910" expanded="true" signature="4316:4557" ph="{...}" />
+            <marker date="1490279495910" expanded="true" signature="4431:4525" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/GeneticAlgorithm/Algorithm.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2016">
+          <caret line="96" column="9" lean-forward="false" selection-start-line="96" selection-start-column="9" selection-end-line="96" selection-end-column="9" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/GeneticAlgorithm/Program.cs">
+      <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="612">
           <caret line="36" column="43" lean-forward="false" selection-start-line="36" selection-start-column="43" selection-end-line="36" selection-end-column="43" />
           <folding>
-            <marker date="1488990662081" expanded="true" signature="6:88" ph="..." />
-            <marker date="1488990662081" expanded="true" signature="116:4114" ph="{...}" />
-            <marker date="1488990662081" expanded="true" signature="136:4112" ph="{...}" />
-            <marker date="1488990662081" expanded="true" signature="182:1939" ph="{...}" />
-            <marker date="1488990662081" expanded="true" signature="205:1100" ph="/* FUNCTIONS TO DEFINE (for each problem): ... */" />
-            <marker date="1488990662081" expanded="true" signature="1561:1929" ph="/* GeneticAlgorithm&lt;int&gt; fakeProblemGA = new GeneticAlgorithm&lt;int&gt;(0.0, 0.0, false, 0, 0); // CHANGE THE GENERIC  ... */" />
-            <marker date="1488990662081" expanded="true" signature="1984:2078" ph="{...}" />
-            <marker date="1488990662081" expanded="true" signature="2137:2181" ph="{...}" />
-            <marker date="1488990662081" expanded="true" signature="2280:2325" ph="{...}" />
-            <marker date="1488990662081" expanded="true" signature="2398:3042" ph="{...}" />
-            <marker date="1488990662081" expanded="true" signature="3114:3740" ph="{...}" />
-            <marker date="1488990662081" expanded="true" signature="3252:3666" ph="{...}" />
-            <marker date="1488990662081" expanded="true" signature="3367:3652" ph="{...}" />
-            <marker date="1488990662081" expanded="true" signature="3808:4106" ph="{...}" />
-            <marker date="1488990662081" expanded="true" signature="3898:4069" ph="{...}" />
+            <marker date="1490279495910" expanded="true" signature="6:167" ph="..." />
+            <marker date="1490279495910" expanded="true" signature="195:4565" ph="{...}" />
+            <marker date="1490279495910" expanded="true" signature="215:4563" ph="{...}" />
+            <marker date="1490279495910" expanded="true" signature="314:2020" ph="{...}" />
+            <marker date="1490279495910" expanded="true" signature="337:1232" ph="/* FUNCTIONS TO DEFINE (for each problem): ... */" />
+            <marker date="1490279495910" expanded="true" signature="2071:2145" ph="{...}" />
+            <marker date="1490279495910" expanded="true" signature="2210:2326" ph="{...}" />
+            <marker date="1490279495910" expanded="true" signature="2437:3116" ph="{...}" />
+            <marker date="1490279495910" expanded="true" signature="2625:3043" ph="{...}" />
+            <marker date="1490279495910" expanded="true" signature="2774:3029" ph="{...}" />
+            <marker date="1490279495910" expanded="true" signature="2883:3011" ph="{...}" />
+            <marker date="1490279495910" expanded="true" signature="3204:3852" ph="{...}" />
+            <marker date="1490279495910" expanded="true" signature="3933:4245" ph="{...}" />
+            <marker date="1490279495910" expanded="true" signature="3997:4204" ph="{...}" />
+            <marker date="1490279495910" expanded="true" signature="4112:4190" ph="{...}" />
+            <marker date="1490279495910" expanded="true" signature="4316:4557" ph="{...}" />
+            <marker date="1490279495910" expanded="true" signature="4431:4525" ph="{...}" />
           </folding>
         </state>
       </provider>
@@ -265,21 +377,23 @@
         <state relative-caret-position="336">
           <caret line="16" column="23" lean-forward="false" selection-start-line="16" selection-start-column="23" selection-end-line="16" selection-end-column="23" />
           <folding>
-            <marker date="1488990662081" expanded="true" signature="6:88" ph="..." />
-            <marker date="1488990662081" expanded="true" signature="116:4114" ph="{...}" />
-            <marker date="1488990662081" expanded="true" signature="136:4112" ph="{...}" />
-            <marker date="1488990662081" expanded="true" signature="182:1939" ph="{...}" />
-            <marker date="1488990662081" expanded="true" signature="205:1100" ph="/* FUNCTIONS TO DEFINE (for each problem): ... */" />
-            <marker date="1488990662081" expanded="true" signature="1561:1929" ph="/* GeneticAlgorithm&lt;int&gt; fakeProblemGA = new GeneticAlgorithm&lt;int&gt;(0.0, 0.0, false, 0, 0); // CHANGE THE GENERIC  ... */" />
-            <marker date="1488990662081" expanded="true" signature="1984:2078" ph="{...}" />
-            <marker date="1488990662081" expanded="true" signature="2137:2181" ph="{...}" />
-            <marker date="1488990662081" expanded="true" signature="2280:2325" ph="{...}" />
-            <marker date="1488990662081" expanded="true" signature="2398:3042" ph="{...}" />
-            <marker date="1488990662081" expanded="true" signature="3114:3740" ph="{...}" />
-            <marker date="1488990662081" expanded="true" signature="3252:3666" ph="{...}" />
-            <marker date="1488990662081" expanded="true" signature="3367:3652" ph="{...}" />
-            <marker date="1488990662081" expanded="true" signature="3808:4106" ph="{...}" />
-            <marker date="1488990662081" expanded="true" signature="3898:4069" ph="{...}" />
+            <marker date="1490279495910" expanded="true" signature="6:167" ph="..." />
+            <marker date="1490279495910" expanded="true" signature="195:4565" ph="{...}" />
+            <marker date="1490279495910" expanded="true" signature="215:4563" ph="{...}" />
+            <marker date="1490279495910" expanded="true" signature="314:2020" ph="{...}" />
+            <marker date="1490279495910" expanded="true" signature="337:1232" ph="/* FUNCTIONS TO DEFINE (for each problem): ... */" />
+            <marker date="1490279495910" expanded="true" signature="2071:2145" ph="{...}" />
+            <marker date="1490279495910" expanded="true" signature="2210:2326" ph="{...}" />
+            <marker date="1490279495910" expanded="true" signature="2437:3116" ph="{...}" />
+            <marker date="1490279495910" expanded="true" signature="2625:3043" ph="{...}" />
+            <marker date="1490279495910" expanded="true" signature="2774:3029" ph="{...}" />
+            <marker date="1490279495910" expanded="true" signature="2883:3011" ph="{...}" />
+            <marker date="1490279495910" expanded="true" signature="3204:3852" ph="{...}" />
+            <marker date="1490279495910" expanded="true" signature="3933:4245" ph="{...}" />
+            <marker date="1490279495910" expanded="true" signature="3997:4204" ph="{...}" />
+            <marker date="1490279495910" expanded="true" signature="4112:4190" ph="{...}" />
+            <marker date="1490279495910" expanded="true" signature="4316:4557" ph="{...}" />
+            <marker date="1490279495910" expanded="true" signature="4431:4525" ph="{...}" />
           </folding>
         </state>
       </provider>
@@ -289,21 +403,23 @@
         <state relative-caret-position="340">
           <caret line="20" column="56" lean-forward="false" selection-start-line="20" selection-start-column="56" selection-end-line="20" selection-end-column="56" />
           <folding>
-            <marker date="1488990662081" expanded="true" signature="6:88" ph="..." />
-            <marker date="1488990662081" expanded="true" signature="116:4114" ph="{...}" />
-            <marker date="1488990662081" expanded="true" signature="136:4112" ph="{...}" />
-            <marker date="1488990662081" expanded="true" signature="182:1939" ph="{...}" />
-            <marker date="1488990662081" expanded="true" signature="205:1100" ph="/* FUNCTIONS TO DEFINE (for each problem): ... */" />
-            <marker date="1488990662081" expanded="true" signature="1561:1929" ph="/* GeneticAlgorithm&lt;int&gt; fakeProblemGA = new GeneticAlgorithm&lt;int&gt;(0.0, 0.0, false, 0, 0); // CHANGE THE GENERIC  ... */" />
-            <marker date="1488990662081" expanded="true" signature="1984:2078" ph="{...}" />
-            <marker date="1488990662081" expanded="true" signature="2137:2181" ph="{...}" />
-            <marker date="1488990662081" expanded="true" signature="2280:2325" ph="{...}" />
-            <marker date="1488990662081" expanded="true" signature="2398:3042" ph="{...}" />
-            <marker date="1488990662081" expanded="true" signature="3114:3740" ph="{...}" />
-            <marker date="1488990662081" expanded="true" signature="3252:3666" ph="{...}" />
-            <marker date="1488990662081" expanded="true" signature="3367:3652" ph="{...}" />
-            <marker date="1488990662081" expanded="true" signature="3808:4106" ph="{...}" />
-            <marker date="1488990662081" expanded="true" signature="3898:4069" ph="{...}" />
+            <marker date="1490279495910" expanded="true" signature="6:167" ph="..." />
+            <marker date="1490279495910" expanded="true" signature="195:4565" ph="{...}" />
+            <marker date="1490279495910" expanded="true" signature="215:4563" ph="{...}" />
+            <marker date="1490279495910" expanded="true" signature="314:2020" ph="{...}" />
+            <marker date="1490279495910" expanded="true" signature="337:1232" ph="/* FUNCTIONS TO DEFINE (for each problem): ... */" />
+            <marker date="1490279495910" expanded="true" signature="2071:2145" ph="{...}" />
+            <marker date="1490279495910" expanded="true" signature="2210:2326" ph="{...}" />
+            <marker date="1490279495910" expanded="true" signature="2437:3116" ph="{...}" />
+            <marker date="1490279495910" expanded="true" signature="2625:3043" ph="{...}" />
+            <marker date="1490279495910" expanded="true" signature="2774:3029" ph="{...}" />
+            <marker date="1490279495910" expanded="true" signature="2883:3011" ph="{...}" />
+            <marker date="1490279495910" expanded="true" signature="3204:3852" ph="{...}" />
+            <marker date="1490279495910" expanded="true" signature="3933:4245" ph="{...}" />
+            <marker date="1490279495910" expanded="true" signature="3997:4204" ph="{...}" />
+            <marker date="1490279495910" expanded="true" signature="4112:4190" ph="{...}" />
+            <marker date="1490279495910" expanded="true" signature="4316:4557" ph="{...}" />
+            <marker date="1490279495910" expanded="true" signature="4431:4525" ph="{...}" />
           </folding>
         </state>
       </provider>
@@ -331,42 +447,72 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/GeneticAlgorithm/Algorithm.cs">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="816">
-          <caret line="96" column="9" lean-forward="false" selection-start-line="96" selection-start-column="9" selection-end-line="96" selection-end-column="9" />
+        <state relative-caret-position="533">
+          <caret line="71" column="41" lean-forward="false" selection-start-line="71" selection-start-column="41" selection-end-line="71" selection-end-column="41" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/GeneticAlgorithm/Converter.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="84">
+          <caret line="4" column="27" lean-forward="false" selection-start-line="4" selection-start-column="27" selection-end-line="4" selection-end-column="27" />
           <folding>
-            <marker date="1488979200296" expanded="true" signature="6:32" ph="..." />
-            <marker date="1488979200296" expanded="true" signature="60:4307" ph="{...}" />
-            <marker date="1488979200296" expanded="true" signature="101:4305" ph="{...}" />
-            <marker date="1488979200296" expanded="true" signature="417:665" ph="{...}" />
-            <marker date="1488979200296" expanded="true" signature="921:4299" ph="{...}" />
-            <marker date="1488979200296" expanded="true" signature="1229:3781" ph="{...}" />
-            <marker date="1488979200296" expanded="true" signature="1644:2175" ph="{...}" />
-            <marker date="1488979200296" expanded="true" signature="2196:2268" ph="{...}" />
-            <marker date="1488979200296" expanded="true" signature="2603:3531" ph="{...}" />
+            <marker date="1490277836240" expanded="true" signature="41:1814" ph="{...}" />
+            <marker date="1490277836240" expanded="true" signature="77:1812" ph="{...}" />
+            <marker date="1490277836240" expanded="true" signature="137:428" ph="{...}" />
+            <marker date="1490277836240" expanded="true" signature="226:391" ph="{...}" />
+            <marker date="1490277836240" expanded="true" signature="482:773" ph="{...}" />
+            <marker date="1490277836240" expanded="true" signature="571:736" ph="{...}" />
+            <marker date="1490277836240" expanded="true" signature="840:1138" ph="{...}" />
+            <marker date="1490277836240" expanded="true" signature="930:1101" ph="{...}" />
+            <marker date="1490277836240" expanded="true" signature="1205:1534" ph="{...}" />
+            <marker date="1490277836240" expanded="true" signature="1302:1499" ph="{...}" />
+            <marker date="1490277836240" expanded="true" signature="1601:1806" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/GeneticAlgorithm/Ind.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="558">
+          <caret line="39" column="9" lean-forward="true" selection-start-line="39" selection-start-column="9" selection-end-line="39" selection-end-column="9" />
+          <folding>
+            <marker date="1490278467031" expanded="true" signature="6:66" ph="..." />
+            <marker date="1490278467031" expanded="true" signature="94:1080" ph="{...}" />
+            <marker date="1490278467031" expanded="true" signature="120:1078" ph="{...}" />
+            <marker date="1490278467031" expanded="true" signature="211:295" ph="{...}" />
+            <marker date="1490278467031" expanded="true" signature="339:431" ph="{...}" />
+            <marker date="1490278467031" expanded="true" signature="459:518" ph="{...}" />
+            <marker date="1490278467031" expanded="true" signature="568:781" ph="{...}" />
+            <marker date="1490278467031" expanded="true" signature="666:734" ph="{...}" />
+            <marker date="1490278467031" expanded="true" signature="823:907" ph="{...}" />
+            <marker date="1490278467031" expanded="true" signature="950:1072" ph="{...}" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/GeneticAlgorithm/Program.cs">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="391">
-          <caret line="29" column="35" lean-forward="true" selection-start-line="29" selection-start-column="35" selection-end-line="29" selection-end-column="35" />
+        <state relative-caret-position="456">
+          <caret line="41" column="9" lean-forward="true" selection-start-line="41" selection-start-column="9" selection-end-line="41" selection-end-column="9" />
           <folding>
-            <marker date="1488990662081" expanded="true" signature="6:88" ph="..." />
-            <marker date="1488990662081" expanded="true" signature="116:4114" ph="{...}" />
-            <marker date="1488990662081" expanded="true" signature="136:4112" ph="{...}" />
-            <marker date="1488990662081" expanded="true" signature="182:1939" ph="{...}" />
-            <marker date="1488990662081" expanded="true" signature="205:1100" ph="/* FUNCTIONS TO DEFINE (for each problem): ... */" />
-            <marker date="1488990662081" expanded="true" signature="1561:1929" ph="/* GeneticAlgorithm&lt;int&gt; fakeProblemGA = new GeneticAlgorithm&lt;int&gt;(0.0, 0.0, false, 0, 0); // CHANGE THE GENERIC  ... */" />
-            <marker date="1488990662081" expanded="true" signature="1984:2078" ph="{...}" />
-            <marker date="1488990662081" expanded="true" signature="2137:2181" ph="{...}" />
-            <marker date="1488990662081" expanded="true" signature="2280:2325" ph="{...}" />
-            <marker date="1488990662081" expanded="true" signature="2398:3042" ph="{...}" />
-            <marker date="1488990662081" expanded="true" signature="3114:3740" ph="{...}" />
-            <marker date="1488990662081" expanded="true" signature="3252:3666" ph="{...}" />
-            <marker date="1488990662081" expanded="true" signature="3367:3652" ph="{...}" />
-            <marker date="1488990662081" expanded="true" signature="3808:4106" ph="{...}" />
-            <marker date="1488990662081" expanded="true" signature="3898:4069" ph="{...}" />
+            <marker date="1490279495910" expanded="true" signature="6:167" ph="..." />
+            <marker date="1490279495910" expanded="true" signature="195:4565" ph="{...}" />
+            <marker date="1490279495910" expanded="true" signature="215:4563" ph="{...}" />
+            <marker date="1490279495910" expanded="true" signature="314:2020" ph="{...}" />
+            <marker date="1490279495910" expanded="true" signature="337:1232" ph="/* FUNCTIONS TO DEFINE (for each problem): ... */" />
+            <marker date="1490279495910" expanded="true" signature="2071:2145" ph="{...}" />
+            <marker date="1490279495910" expanded="true" signature="2210:2326" ph="{...}" />
+            <marker date="1490279495910" expanded="true" signature="2437:3116" ph="{...}" />
+            <marker date="1490279495910" expanded="true" signature="2625:3043" ph="{...}" />
+            <marker date="1490279495910" expanded="true" signature="2774:3029" ph="{...}" />
+            <marker date="1490279495910" expanded="true" signature="2883:3011" ph="{...}" />
+            <marker date="1490279495910" expanded="true" signature="3204:3852" ph="{...}" />
+            <marker date="1490279495910" expanded="true" signature="3933:4245" ph="{...}" />
+            <marker date="1490279495910" expanded="true" signature="3997:4204" ph="{...}" />
+            <marker date="1490279495910" expanded="true" signature="4112:4190" ph="{...}" />
+            <marker date="1490279495910" expanded="true" signature="4316:4557" ph="{...}" />
+            <marker date="1490279495910" expanded="true" signature="4431:4525" ph="{...}" />
           </folding>
         </state>
       </provider>

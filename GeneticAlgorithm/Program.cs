@@ -1,12 +1,16 @@
 ﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
 using System.Runtime;
+using System.Security.Cryptography.X509Certificates;
 
 namespace GeneticAlgorithm
 {
     class Program
     {
+        public static Random Random = new Random();
+
         static void Main(string[] args)
         {
             /* FUNCTIONS TO DEFINE (for each problem):
@@ -17,91 +21,98 @@ namespace GeneticAlgorithm
             Func<Ind, double, Ind> mutation;                            ==> input is one individual and mutation rate, output is the mutated individual
             */
 
-            //TESTING BINARY CONVERTER
-            const string binary = "0001";
-            Console.WriteLine(BinaryConvert(binary, 2));
+            const int populationSize = 10;
+            const int maxIterations = 100;
+            const double crossoverRate = 0.8;
+            const double mutationRate = 3;
+            const bool elitism = true;
 
-            //TESTING CROSSOVER
-            var y = Tuple.Create(11111, 01101);
-            y = Crossover(y);
-            Console.WriteLine(y.Item1 + " | " + y.Item2);
-
-            //TESTING Mutate
-            var mutateY = 10101010;
-            mutateY = Mutation(mutateY, 25);
-            Console.WriteLine(mutateY);
-
-//            GeneticAlgorithm<int> fakeProblemGA = new GeneticAlgorithm<int>(0.0, 0.0, false, 0, 0); // CHANGE THE GENERIC TYPE (NOW IT'S INT AS AN EXAMPLE) AND THE PARAMETERS VALUES
-//            var solution = fakeProblemGA.Run(CreateIndividual<int>, null, null, null, null);
-//            Console.WriteLine("Solution: ");
-//            Console.WriteLine(solution);
+            var geneticAlgorithm =
+                new GeneticAlgorithm<Binary>(crossoverRate, mutationRate, elitism, populationSize,
+                    maxIterations); // CHANGE THE GENERIC TYPE (NOW IT'S INT AS AN EXAMPLE) AND THE PARAMETERS VALUES
+            var solution = geneticAlgorithm.Run(
+                CreateIndividual,
+                ComputeFitness,
+                SelectTwoParents,
+                Crossover,
+                Mutation
+            );
+            Console.WriteLine("Solution: ");
+            Console.WriteLine(solution.ToInt());
         }
 
 
-        static Ind CreateIndividual<Ind>()
+        private static Binary CreateIndividual()
         {
-//            Digit * math.Pow(2, index)
-            return default(Ind);
+            return new Binary(5, Random.Next(0, 32));
         }
 
-        static double ComputeFitness<Ind>(Ind individual)
+        private static double ComputeFitness(Binary individual)
         {
-            return 0.0;
+            var value = individual.ToInt();
+            return -Math.Pow(value, 2) + 7 * value;
         }
 
-        static Func<Tuple<Ind, Ind>> selectTwoParents<Ind>(Ind[] individuals, double[] fitnesses)
+        private static Func<Tuple<Binary, Binary>> SelectTwoParents(Binary[] individuals, double[] fitnesses)
         {
-            return null;
+            var parents = new List<Binary>();
+            var totalFitness = fitnesses.Sum();
+            //we need 2 individuals (parents)
+            while (parents.Count < 2)
+            {
+                var randomvalue = new Random().NextDouble() * totalFitness;
+                for (var j = 0; j < fitnesses.Length; j++)
+                {
+                    randomvalue -= fitnesses[j];
+                    if (randomvalue <= 0)
+                    {
+                        parents.Add(individuals[j]);
+                        break;
+                    }
+                }
+            }
+            return () => Tuple.Create(parents[0], parents[1]);
         }
 
 
-        static Tuple<Ind, Ind> Crossover<Ind>(Tuple<Ind, Ind> parents)
+        private static Tuple<Binary, Binary> Crossover(Tuple<Binary, Binary> parents)
         {
-            var item1 = parents.Item1 + "";
-            var item2 = parents.Item2 + "";
-            var tmp = parents.Item2 + "";
+            var item1 = parents.Item1;
+            var item2 = parents.Item2;
+            var tmp = parents.Item2;
 
-            var random = new Random();
-            var crossoverpoint = random.Next(0,item1.Length );
+            var crossoverpoint = Random.Next(0, item1.Size);
 
-            item2 = item2.Substring(0, crossoverpoint) + item1.Substring(crossoverpoint);
-            item1 = item1.Substring(0, crossoverpoint) + tmp.Substring(crossoverpoint);
+            item2 = new Binary(item2.GetPart(0, crossoverpoint).Merge(item1.GetPart(crossoverpoint, item1.Size)));
+            item1 = new Binary(item1.GetPart(0, crossoverpoint).Merge(tmp.GetPart(crossoverpoint, tmp.Size)));
 
-            var item1Casted = (Ind) Convert.ChangeType(item1, typeof(Ind));
-            var item2Casted = (Ind) Convert.ChangeType(item2, typeof(Ind));
+            var item1Casted = (Binary) Convert.ChangeType(item1, typeof(Binary));
+            var item2Casted = (Binary) Convert.ChangeType(item2, typeof(Binary));
             return Tuple.Create(item1Casted, item2Casted);
         }
 
-        static Ind Mutation<Ind>(Ind individual, double mutation_rate)
+        private static Binary Mutation(Binary individual, double mutation_rate)
         {
-            var ind = individual + "";
-            var random = new Random();
-
-            for (var i = 0; i < ind.Length; i++)
+            for (var i = 0; i < individual.Size; i++)
             {
                 //do something with the values
-                if (random.Next(100) < mutation_rate)
+                if (Random.Next(100) < mutation_rate)
                 {
-                    var tempind = ind.Substring(0, i);
-                    tempind += ind[i] == '1' ? '0' : '1';
-                    if (i + 1 < ind.Length)
-                        tempind += ind.Substring(i + 1);
-                    ind = tempind;
+                    individual.Switch(i);
                 }
             }
-
-            return (Ind) Convert.ChangeType(ind, typeof(Ind));
+            return individual;
         }
 
-        private static int BinaryConvert(string binary, int _base)
+
+        private List<float> SES(IReadOnlyList<float> x, float alpha)
         {
-            var result = 0;
-            for (var i = 0; i < binary.Length; i++)
+            var s = new List<float>(x.Count) {[0] = x[0]};
+            for (var i = 1; i < x.Count; i++)
             {
-                var digit = Convert.ToInt32("" + binary[i]);
-                result += digit * (int) Math.Pow(_base, (binary.Length - 1) - i);
+                s[i] = alpha * x[i - 1] + (1 - alpha) * s[i - 1];
             }
-            return result;
+            return s;
         }
     }
 }
