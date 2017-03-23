@@ -1,12 +1,11 @@
-﻿using System;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using System.Linq;
 
 namespace GeneticAlgorithm
 {
     public class Binary
     {
-        int[] _binary;
+        private readonly int[] _binary;
         public int Size;
 
         public Binary(int[] binary)
@@ -19,11 +18,6 @@ namespace GeneticAlgorithm
         {
             Size = size;
             _binary = value.ToBitsArray(size);
-        }
-
-        public int ToInt()
-        {
-            return _binary.ToBinary();
         }
 
         public int[] GetPart(int start, int end)
@@ -39,6 +33,11 @@ namespace GeneticAlgorithm
         public void Switch(int position)
         {
             _binary[position] = _binary[position] == 1 ? 0 : 1;
+        }
+
+        public int ToInt()
+        {
+            return _binary.ToBinary();
         }
 
         public override string ToString()

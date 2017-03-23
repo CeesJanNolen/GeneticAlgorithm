@@ -31,7 +31,7 @@ namespace GeneticAlgorithm
 
             var currentPopulation = initialPopulation;
 
-            for (int generation = 0; generation < numIterations; generation++)
+            for (var generation = 0; generation < numIterations; generation++)
             {
                 // compute fitness of each individual in the population
                 var fitnesses = Enumerable.Range(0, populationSize)
@@ -61,7 +61,7 @@ namespace GeneticAlgorithm
                 var getTwoParents = selectTwoParents(currentPopulation, fitnesses);
 
                 // create the individuals of the next generation
-                for (int newInd = startIndex; newInd < populationSize; newInd++)
+                for (var newInd = startIndex; newInd < populationSize; newInd++)
                 {
                     // select two parents
                     var parents = getTwoParents();
@@ -89,6 +89,20 @@ namespace GeneticAlgorithm
             var finalFitnesses = Enumerable.Range(0, populationSize)
                 .Select(i => computeFitness(currentPopulation[i]))
                 .ToArray();
+
+            var TopIndividual = currentPopulation
+                .Select((individual, index) => new Tuple<Ind, double>(individual, finalFitnesses[index]))
+                .OrderByDescending(tuple => tuple.Item2)
+                .First();
+
+            Console.WriteLine("*************************");
+            Console.WriteLine("End of Genetic Algorithm");
+            Console.WriteLine("*************************");
+            Console.WriteLine("The average fitness of the last population: " + finalFitnesses.Average());
+            Console.WriteLine("The fitness of the best Individual: " + TopIndividual.Item2);
+            Console.WriteLine("The best Individual: " + TopIndividual.Item1 + ". The integer value of him: " +
+                              TopIndividual.Item1.ToString().BinaryConvert(2));
+
             return currentPopulation
                 .Select((individual, index) => new Tuple<Ind, double>(individual, finalFitnesses[index]))
                 .OrderByDescending(tuple => tuple.Item2)

@@ -21,18 +21,18 @@ namespace GeneticAlgorithm
             for (var i = 0; i < array.Length; i++)
             {
                 var digit = Convert.ToInt32("" + array[i]);
-                result += digit * (int) Math.Pow(2, (array.Length - 1) - i);
+                result += digit * (int) Math.Pow(2, array.Length - 1 - i);
             }
             return result;
         }
 
-        public static int BinaryConvert(string binary, int _base)
+        public static int BinaryConvert(this string binary, int _base)
         {
             var result = 0;
             for (var i = 0; i < binary.Length; i++)
             {
                 var digit = Convert.ToInt32("" + binary[i]);
-                result += digit * (int) Math.Pow(_base, (binary.Length - 1) - i);
+                result += digit * (int) Math.Pow(_base, binary.Length - 1 - i);
             }
             return result;
         }

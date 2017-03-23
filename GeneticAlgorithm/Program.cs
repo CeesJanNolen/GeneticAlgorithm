@@ -1,9 +1,6 @@
 ﻿using System;
-using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
-using System.Runtime;
-using System.Security.Cryptography.X509Certificates;
 
 namespace GeneticAlgorithm
 {
@@ -37,10 +34,8 @@ namespace GeneticAlgorithm
                 Crossover,
                 Mutation
             );
-            Console.WriteLine("Solution: ");
-            Console.WriteLine(solution.ToInt());
-        }
 
+        }
 
         private static Binary CreateIndividual()
         {
@@ -103,7 +98,6 @@ namespace GeneticAlgorithm
             }
             return individual;
         }
-
 
         private List<float> SES(IReadOnlyList<float> x, float alpha)
         {
