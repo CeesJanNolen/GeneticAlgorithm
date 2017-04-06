@@ -3,50 +3,50 @@ using System.Linq;
 
 namespace GeneticAlgorithm
 {
-    public class GeneticAlgorithm<Ind>
+    public class GeneticAlgorithm<TInd>
     {
-        double crossoverRate;
-        double mutationRate;
-        bool elitism;
-        int populationSize;
-        int numIterations;
-        Random r = new Random();
+        private readonly double _crossoverRate;
+        private readonly double _mutationRate;
+        private readonly bool _elitism;
+        private readonly int _populationSize;
+        private readonly int _numIterations;
+        private readonly Random _random = new Random();
 
         public GeneticAlgorithm(double crossoverRate, double mutationRate, bool elitism, int populationSize,
             int numIterations)
         {
-            this.crossoverRate = crossoverRate;
-            this.mutationRate = mutationRate;
-            this.elitism = elitism;
-            this.populationSize = populationSize;
-            this.numIterations = numIterations;
+            _crossoverRate = crossoverRate;
+            _mutationRate = mutationRate;
+            _elitism = elitism;
+            _populationSize = populationSize;
+            _numIterations = numIterations;
         }
 
-        public Ind Run(Func<Ind> createIndividual, Func<Ind, double> computeFitness,
-            Func<Ind[], double[], Func<Tuple<Ind, Ind>>> selectTwoParents,
-            Func<Tuple<Ind, Ind>, Tuple<Ind, Ind>> crossover, Func<Ind, double, Ind> mutation)
+        public TInd Run(Func<TInd> createIndividual, Func<TInd, double> computeFitness,
+            Func<TInd[], double[], Func<Tuple<TInd, TInd>>> selectTwoParents,
+            Func<Tuple<TInd, TInd>, Tuple<TInd, TInd>> crossover, Func<TInd, double, TInd> mutation)
         {
             // initialize the first population
-            var initialPopulation = Enumerable.Range(0, populationSize).Select(i => createIndividual()).ToArray();
+            var initialPopulation = Enumerable.Range(0, _populationSize).Select(i => createIndividual()).ToArray();
 
             var currentPopulation = initialPopulation;
 
-            for (var generation = 0; generation < numIterations; generation++)
+            for (var generation = 0; generation < _numIterations; generation++)
             {
                 // compute fitness of each individual in the population
-                var fitnesses = Enumerable.Range(0, populationSize)
+                var fitnesses = Enumerable.Range(0, _populationSize)
                     .Select(i => computeFitness(currentPopulation[i]))
                     .ToArray();
 
-                var nextPopulation = new Ind[populationSize];
+                var nextPopulation = new TInd[_populationSize];
 
                 // apply elitism
                 int startIndex;
-                if (elitism)
+                if (_elitism)
                 {
                     startIndex = 1;
                     var populationWithFitness = currentPopulation.Select(
-                        (individual, index) => new Tuple<Ind, double>(individual, fitnesses[index]));
+                        (individual, index) => new Tuple<TInd, double>(individual, fitnesses[index]));
                     var populationSorted =
                         populationWithFitness.OrderByDescending(tuple => tuple.Item2); // item2 is the fitness
                     var bestIndividual = populationSorted.First();
@@ -61,22 +61,22 @@ namespace GeneticAlgorithm
                 var getTwoParents = selectTwoParents(currentPopulation, fitnesses);
 
                 // create the individuals of the next generation
-                for (var newInd = startIndex; newInd < populationSize; newInd++)
+                for (var newInd = startIndex; newInd < _populationSize; newInd++)
                 {
                     // select two parents
                     var parents = getTwoParents();
 
                     // do a crossover between the selected parents to generate two children (with a certain probability, crossover does not happen and the two parents are kept unchanged)
-                    Tuple<Ind, Ind> offspring;
-                    if (r.NextDouble() < crossoverRate)
+                    Tuple<TInd, TInd> offspring;
+                    if (_random.NextDouble() < _crossoverRate)
                         offspring = crossover(parents);
                     else
                         offspring = parents;
 
                     // save the two children in the next population (after mutation)
-                    nextPopulation[newInd++] = mutation(offspring.Item1, mutationRate);
-                    if (newInd < populationSize) //there is still space for the second children inside the population
-                        nextPopulation[newInd] = mutation(offspring.Item2, mutationRate);
+                    nextPopulation[newInd++] = mutation(offspring.Item1, _mutationRate);
+                    if (newInd < _populationSize) //there is still space for the second children inside the population
+                        nextPopulation[newInd] = mutation(offspring.Item2, _mutationRate);
                 }
 
                 // the new population becomes the current one
@@ -86,12 +86,12 @@ namespace GeneticAlgorithm
             }
 
             // recompute the fitnesses on the final population and return the best individual
-            var finalFitnesses = Enumerable.Range(0, populationSize)
+            var finalFitnesses = Enumerable.Range(0, _populationSize)
                 .Select(i => computeFitness(currentPopulation[i]))
                 .ToArray();
 
-            var TopIndividual = currentPopulation
-                .Select((individual, index) => new Tuple<Ind, double>(individual, finalFitnesses[index]))
+            var topIndividual = currentPopulation
+                .Select((individual, index) => new Tuple<TInd, double>(individual, finalFitnesses[index]))
                 .OrderByDescending(tuple => tuple.Item2)
                 .First();
 
@@ -99,12 +99,12 @@ namespace GeneticAlgorithm
             Console.WriteLine("End of Genetic Algorithm");
             Console.WriteLine("*************************");
             Console.WriteLine("The average fitness of the last population: " + finalFitnesses.Average());
-            Console.WriteLine("The fitness of the best Individual: " + TopIndividual.Item2);
-            Console.WriteLine("The best Individual: " + TopIndividual.Item1 + ". The integer value of him: " +
-                              TopIndividual.Item1.ToString().BinaryConvert(2));
+            Console.WriteLine("The fitness of the best Individual: " + topIndividual.Item2);
+            Console.WriteLine("The best Individual: " + topIndividual.Item1 + ". The integer value of him: " +
+                              topIndividual.Item1.ToString().BinaryConvert(2));
 
             return currentPopulation
-                .Select((individual, index) => new Tuple<Ind, double>(individual, finalFitnesses[index]))
+                .Select((individual, index) => new Tuple<TInd, double>(individual, finalFitnesses[index]))
                 .OrderByDescending(tuple => tuple.Item2)
                 .First()
                 .Item1;

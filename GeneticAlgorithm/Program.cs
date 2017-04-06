@@ -5,11 +5,11 @@ using System.Linq;
 
 namespace GeneticAlgorithm
 {
-    class Program
+    internal class Program
     {
         public static Random Random = new Random();
 
-        static void Main(string[] args)
+        private static void Main(string[] args)
         {
             /* FUNCTIONS TO DEFINE (for each problem):
             Func<Ind> createIndividual;                                 ==> input is nothing, output is a new individual
@@ -95,27 +95,17 @@ namespace GeneticAlgorithm
             return Tuple.Create(item1, item2);
         }
 
-        private static Binary Mutation(Binary individual, double mutation_rate)
+        private static Binary Mutation(Binary individual, double mutationRate)
         {
             for (var i = 0; i < individual.Size; i++)
             {
                 //do something with the values
-                if (Random.Next(100) < mutation_rate)
+                if (Random.Next(100) < mutationRate)
                 {
                     individual.Switch(i);
                 }
             }
             return individual;
-        }
-
-        private List<float> SES(IReadOnlyList<float> x, float alpha)
-        {
-            var s = new List<float>(x.Count) {[0] = x[0]};
-            for (var i = 1; i < x.Count; i++)
-            {
-                s[i] = alpha * x[i - 1] + (1 - alpha) * s[i - 1];
-            }
-            return s;
         }
     }
 }

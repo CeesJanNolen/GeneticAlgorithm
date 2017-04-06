@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Linq;
 
 namespace GeneticAlgorithm
 {
@@ -6,35 +7,21 @@ namespace GeneticAlgorithm
     {
         public static int ToBinary(this string value)
         {
-            var result = 0;
-            for (var i = 0; i < value.Length; i++)
-            {
-                var digit = Convert.ToInt32("" + value[i]);
-                result += digit * (int) Math.Pow(2, (value.Length - 1) - i);
-            }
-            return result;
+            return value.Select(Convert.ToInt32)
+                .Select((digit, i) => digit * (int) Math.Pow(2, value.Length - 1 - i))
+                .Sum();
         }
 
         public static int ToBinary(this int[] array)
         {
-            var result = 0;
-            for (var i = 0; i < array.Length; i++)
-            {
-                var digit = Convert.ToInt32("" + array[i]);
-                result += digit * (int) Math.Pow(2, array.Length - 1 - i);
-            }
-            return result;
+            return array.Select((item, index) => item * (int) Math.Pow(2, array.Length - 1 - index)).Sum();
         }
 
         public static int BinaryConvert(this string binary, int _base)
         {
-            var result = 0;
-            for (var i = 0; i < binary.Length; i++)
-            {
-                var digit = Convert.ToInt32("" + binary[i]);
-                result += digit * (int) Math.Pow(_base, binary.Length - 1 - i);
-            }
-            return result;
+            return binary.Select(Convert.ToInt32)
+                .Select((digit, i) => digit * (int) Math.Pow(_base, binary.Length - 1 - i))
+                .Sum();
         }
 
         public static int[] ToBitsArray(this int value, int size)
