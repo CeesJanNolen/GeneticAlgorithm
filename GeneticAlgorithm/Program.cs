@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Diagnostics;
 using System.Linq;
 
 namespace GeneticAlgorithm
@@ -18,12 +19,17 @@ namespace GeneticAlgorithm
             Func<Ind, double, Ind> mutation;                            ==> input is one individual and mutation rate, output is the mutated individual
             */
 
-            const int populationSize = 10;
+            const int populationSize = 500;
             const int maxIterations = 100;
-            const double crossoverRate = 0.8;
-            const double mutationRate = 3;
+            const double crossoverRate = 8;
+            const double mutationRate = 5;
             const bool elitism = true;
 
+            // Create new stopwatch.
+            var stopwatch = new Stopwatch();
+
+            // Begin timing.
+            stopwatch.Start();
             var geneticAlgorithm =
                 new GeneticAlgorithm<Binary>(crossoverRate, mutationRate, elitism, populationSize,
                     maxIterations); // CHANGE THE GENERIC TYPE (NOW IT'S INT AS AN EXAMPLE) AND THE PARAMETERS VALUES
@@ -34,6 +40,11 @@ namespace GeneticAlgorithm
                 Crossover,
                 Mutation
             );
+            // Stop timing.
+            stopwatch.Stop();
+
+            // Write result.
+            Console.WriteLine("Time elapsed: {0}", stopwatch.Elapsed);
 
         }
 
@@ -81,9 +92,7 @@ namespace GeneticAlgorithm
             item2 = new Binary(item2.GetPart(0, crossoverpoint).Merge(item1.GetPart(crossoverpoint, item1.Size)));
             item1 = new Binary(item1.GetPart(0, crossoverpoint).Merge(tmp.GetPart(crossoverpoint, tmp.Size)));
 
-            var item1Casted = (Binary) Convert.ChangeType(item1, typeof(Binary));
-            var item2Casted = (Binary) Convert.ChangeType(item2, typeof(Binary));
-            return Tuple.Create(item1Casted, item2Casted);
+            return Tuple.Create(item1, item2);
         }
 
         private static Binary Mutation(Binary individual, double mutation_rate)
