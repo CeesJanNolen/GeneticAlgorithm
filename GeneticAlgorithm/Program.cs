@@ -19,10 +19,10 @@ namespace GeneticAlgorithm
             Func<Ind, double, Ind> mutation;                            ==> input is one individual and mutation rate, output is the mutated individual
             */
 
-            const int populationSize = 500;
+            const int populationSize = 20;
             const int maxIterations = 100;
-            const double crossoverRate = 8;
-            const double mutationRate = 5;
+            const double crossoverRate = 0.85;
+            const double mutationRate = 0.1;
             const bool elitism = true;
 
             // Create new stopwatch.
@@ -30,9 +30,10 @@ namespace GeneticAlgorithm
 
             // Begin timing.
             stopwatch.Start();
+
             var geneticAlgorithm =
                 new GeneticAlgorithm<Binary>(crossoverRate, mutationRate, elitism, populationSize,
-                    maxIterations); // CHANGE THE GENERIC TYPE (NOW IT'S INT AS AN EXAMPLE) AND THE PARAMETERS VALUES
+                    maxIterations);
             var solution = geneticAlgorithm.Run(
                 CreateIndividual,
                 ComputeFitness,
@@ -62,6 +63,8 @@ namespace GeneticAlgorithm
         private static Func<Tuple<Binary, Binary>> SelectTwoParents(Binary[] individuals, double[] fitnesses)
         {
             var parents = new List<Binary>();
+            var lowestFitness = fitnesses.Min();
+            fitnesses = fitnesses.Select(item => item + Math.Abs(lowestFitness)).ToArray();
             var totalFitness = fitnesses.Sum();
             //we need 2 individuals (parents)
             while (parents.Count < 2)

@@ -19,9 +19,10 @@ namespace GeneticAlgorithm
 
         public static int BinaryConvert(this string binary, int _base)
         {
-            return binary.Select(Convert.ToInt32)
-                .Select((digit, i) => digit * (int) Math.Pow(_base, binary.Length - 1 - i))
+            var result = binary
+                .Select((item, index) => int.Parse(item.ToString()) * (int) Math.Pow(_base, binary.Length - 1 - index))
                 .Sum();
+            return result;
         }
 
         public static int[] ToBitsArray(this int value, int size)
